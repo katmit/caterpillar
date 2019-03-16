@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Caterpillar</title>
+    <link type="text/css" rel="stylesheet" href="css/gameStyle.css"> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/gl-matrix-min.js"></script>
+    <script type="text/javascript" src="js/point_generator.js"></script>
+	<script type="text/javascript" src="js/game_logic.js"></script>
+	<script type="text/javascript" src="js/renderer.js"></script>
+  </head>
+  <body onload="main();">
+		<canvas id="myImageCanvas" height="725" width="1025" style="top:50px;"></canvas>
+		<canvas id="myWebGLCanvas" height="725" width="1025" style="top:50px;"></canvas>
+		<span id="scoreLbl">Your Length: 3</span>
+		<span id="notifier"></span>
+		<span id="notifierSub"></span>
+		<button id="startBtn" type="button" onclick="gameLoop()">Start</button>
+		<div id="instructionsBox">
+			Eat fruit to grow in size. The bigger you get, the less nimble you'll be. Hit a wall or yourself and the game's over!<br><br>
+			Movement: (Arrow Keys)<br>
+			<table style="margin:auto; table-layout: fixed;width:400px;padding-top:5px;">
+				<tr>
+					<td>UP &#9650;</td>
+					<td>DOWN &#9660;</td>
+					<td>LEFT &#9664;</td>
+					<td>RIGHT &#9658;</td>
+				</tr>
+			</table>
+		</div>
+  </body>
+</html>
+<script>
+//Adjusts UI and facilitates user input
+
+	document.getElementById("myImageCanvas").style.left = ((screen.width - 1025) / 2) + "px";
+	document.getElementById("myWebGLCanvas").style.left = ((screen.width - 1025) / 2) + "px";
+	document.getElementById("instructionsBox").style.left = ((screen.width - 1025) / 2) + "px";
+	document.getElementById("startBtn").style.left = (((screen.width - 1025) / 2) + (1025 / 2) - 42.5) + "px";
+	document.getElementById("scoreLbl").style.left = (((screen.width - 1025) / 2) + 720) + "px";
+	document.getElementById("notifier").style.left = (((screen.width - 1025) / 2) + 415) + "px";
+	document.getElementById("notifierSub").style.left = (((screen.width - 1025) / 2) + 415) + "px";
+
+	$(document).keydown(function(press) { //to handler player input
+			press.preventDefault();
+			switch(press.which){
+				case 37: //left arrow
+					currentKey = "left";
+					break;
+				case 38: //up arrow
+					currentKey = "up";
+					break;
+				case 39: //right arrow
+					currentKey = "right";
+					break;
+				case 40: //down
+					currentKey = "down";
+					break;
+			}
+		});	
+
+</script>
+

@@ -1,0 +1,96 @@
+#myWebGLCanvas {
+    position: absolute;
+    top: 0px;
+    z-index: 10;
+}
+
+#myImageCanvas {
+    position: absolute;
+    top: 0px;
+    z-index: 0;
+}
+
+#instructionsBox {
+	position: absolute;
+	top: 785px;
+	width:1025px;
+	height:75px;
+	text-align:center;
+	font-family: "Courier New", serif;
+	font-size:12px;
+}
+
+#startBtn {
+	visibility:hidden;
+	position: absolute;
+	top: 445px;
+	width: 80px;
+	height: 80px;
+	border:none;
+	font-family: "Courier New", serif;
+	color: white;
+	background-color: #000000;
+	border-radius: 50%;
+	font-size:18px;
+	z-index: 11;
+}
+
+#startBtn:hover {
+	font-size:20px;
+	width: 85px;
+	height: 85px;
+	left: 469.5px;
+	top: 442.5px;
+	cursor: pointer;
+}
+
+#scoreLbl{
+	visibility:hidden;
+	position: absolute;
+	width:300px;
+	text-align:center;
+	z-index: 11;
+	left: 735px;
+	top: 60px;
+	font-family: "Courier New", serif;
+	font-weight:bold; 
+	color: white;
+	font-size:25px;
+}
+
+#scoreLbl_enemy{
+	visibility:hidden;
+	position: absolute;
+	width:300px;
+	text-align:center;
+	z-index: 11;
+	left: 700px;
+	top: 75px;
+	font-family: "Courier New", serif;
+	color: white;
+	font-size:18px;
+}
+
+#notifier {
+	visibility:hidden;
+	position: absolute;
+	z-index: 11;
+	left: 415px;
+	top: 365px;
+	font-family: "Courier New", serif;
+	color: white;
+	font-size:35px;
+}
+
+#notifierSub {
+	visibility:hidden;
+	position: absolute;
+	width:200px;
+	text-align:center;
+	z-index: 11;
+	left: 415px;
+	top: 400px;
+	font-family: "Courier New", serif;
+	color: white;
+	font-size:15px;
+}
