@@ -28,54 +28,54 @@ var bgMusic = new Audio('sounds/background.mp3');
 bgMusic.loop = true;
 
 function loadObjects(){
+	//https://raw.githubusercontent.com/katmit/caterpillar/master/model_data/apple.json
+	gameObjects.fence.data = generateFromJSON("https://raw.githubusercontent.com/katmit/caterpillar/master/model_data/fence.json");
 	
-	gameObjects.fence.data = generateFromJSON("https://raw.githubusercontent.com/katmit/caterpillar/master/fence.json");
-	
-	gameObjects.catHeadDown.data = generateFromJSON("https://raw.githubusercontent.com/katmit/caterpillar/master/catHead.json");
+	gameObjects.catHeadDown.data = generateFromJSON("https://raw.githubusercontent.com/katmit/caterpillar/master/model_data/catHead.json");
 	gameObjects.catHeadDown.pos = [0, 0];
 	gameObjects.catHeadDown.boardPos = [0, 0];
 	gameObjects.catHeadDown.rotation = 0;
 	
-	gameObjects.catHeadRight.data = generateFromJSON("https://raw.githubusercontent.com/katmit/caterpillar/master/catHeadRight.json");
+	gameObjects.catHeadRight.data = generateFromJSON("https://raw.githubusercontent.com/katmit/caterpillar/master/model_data/catHeadRight.json");
 	gameObjects.catHeadRight.pos = [0, 0];
 	gameObjects.catHeadRight.boardPos = [0, 0];
 	
-	gameObjects.catHeadLeft.data = generateFromJSON("https://raw.githubusercontent.com/katmit/caterpillar/master/catHeadLeft.json");
+	gameObjects.catHeadLeft.data = generateFromJSON("https://raw.githubusercontent.com/katmit/caterpillar/master/model_data/catHeadLeft.json");
 	gameObjects.catHeadLeft.pos = [0, 0];
 	gameObjects.catHeadLeft.boardPos = [0, 0];
 	
-	gameObjects.catHeadUp.data = generateFromJSON("https://raw.githubusercontent.com/katmit/caterpillar/master/catHeadUp.json");
+	gameObjects.catHeadUp.data = generateFromJSON("https://raw.githubusercontent.com/katmit/caterpillar/master/model_data/catHeadUp.json");
 	gameObjects.catHeadUp.pos = [0, 0];
 	gameObjects.catHeadUp.boardPos = [0, 0];
 	
-	gameObjects.catBody.data = generateFromJSON("https://raw.githubusercontent.com/katmit/caterpillar/master/catBody.json");
+	gameObjects.catBody.data = generateFromJSON("https://raw.githubusercontent.com/katmit/caterpillar/master/model_data/catBody.json");
 	gameObjects.catBody.pos = [0, 0];
 	gameObjects.catBody.boardPos = [0, 0];
 	 
 	gameObjects.fruits = [];
 	
 	var cherry = {};
-	var cherryData = generateFromJSON("https://raw.githubusercontent.com/katmit/prog3/gh-pages/cherry.json");
+	var cherryData = generateFromJSON("https://raw.githubusercontent.com/katmit/caterpillar/master/model_data/cherry.json");
 	cherry.data = cherryData;
 	cherry.pos = [0, 0];
 	cherry.name = "fruit";
 	gameObjects.fruits.push(cherry);
 	
 	var grapes = {};
-	var grapesData = generateFromJSON("https://raw.githubusercontent.com/katmit/prog3/gh-pages/grapes.json");
+	var grapesData = generateFromJSON("https://raw.githubusercontent.com/katmit/caterpillar/master/model_data/grapes.json");
 	grapes.data = grapesData;
 	grapes.pos = [0, 0];
 	grapes.name = "fruit";
 	gameObjects.fruits.push(grapes);
 	
 	var apple = {};
-	var appleData = generateFromJSON("https://raw.githubusercontent.com/katmit/prog3/gh-pages/apple.json");
+	var appleData = generateFromJSON("https://raw.githubusercontent.com/katmit/caterpillar/master/model_data/apple.json");
 	apple.data = appleData;
 	apple.pos = [0, 0];
 	apple.name = "fruit";
 	gameObjects.fruits.push(apple);
 	
-	gameObjects.flower_grass.data = generateFromJSON("https://raw.githubusercontent.com/katmit/caterpillar/master/flower_grass.json");
+	gameObjects.flower_grass.data = generateFromJSON("https://raw.githubusercontent.com/katmit/caterpillar/master/model_data/flower_grass.json");
 	gameObjects.flower_grass.pos = [0, 0];
 
 }
